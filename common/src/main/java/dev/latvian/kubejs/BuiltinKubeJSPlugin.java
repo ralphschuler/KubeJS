@@ -214,7 +214,7 @@ public class BuiltinKubeJSPlugin extends KubeJSPlugin {
 		filter.allow("me.shedaniel.architectury"); // Architectury
 
 		// Misc
-		filter.deny("java.net"); // Networks
+		filter.allow("java.net"); // Networks
 		filter.deny("sun"); // Sun
 		filter.deny("com.sun"); // Sun
 		filter.deny("io.netty"); // Netty
