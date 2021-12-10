@@ -43,6 +43,12 @@ jobs:
         run: |
           chmod +x ./gradlew
           ./gradlew build publish --stacktrace --no-daemon
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: dist-without-markdown
+          path: |
+            build
       - name: Release to CurseForge
         if: |
           contains(github.ref, 'main') && !contains(github.event.head_commit.message, '[norelease]') && github.event.inputs.norelease != 'true'
