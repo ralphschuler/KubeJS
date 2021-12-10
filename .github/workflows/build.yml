@@ -48,7 +48,7 @@ jobs:
         with:
           name: dist-without-markdown
           path: |
-            build
+            .
       - name: Release to CurseForge
         if: |
           contains(github.ref, 'main') && !contains(github.event.head_commit.message, '[norelease]') && github.event.inputs.norelease != 'true'
