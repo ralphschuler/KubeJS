@@ -184,31 +184,26 @@ public class BuiltinKubeJSPlugin extends KubeJSPlugin {
 		filter.allow("java.lang.Comparable");
 		filter.allow("java.lang.CharSequence");
 
-		filter.allow("java.crypto");
-		filter.allow("java.crypto.KeyFactory");
+		filter.allow("javax.crypto");
 		filter.allow("java.security");
 		
 		filter.allow("java.math.BigInteger"); // java.math
 		filter.allow("java.math.BigDecimal");
 
-		//filter.deny("java.io"); // IO
-		filter.allow("java.io.Closeable");
-		filter.allow("java.io.Serializable");
+		filter.allow("java.io"); // IO
 
-		//filter.deny("java.nio"); // NIO
+		filter.deny("java.nio"); // NIO
 		filter.allow("java.nio.ByteOrder");
 
 		filter.allow("java.util"); // Utils
-		//filter.deny("java.util.jar");
-		//filter.deny("java.util.zip");
 
 		filter.allow("it.unimi.dsi.fastutil"); // FastUtil
 
 		filter.allow("dev.latvian.kubejs"); // KubeJS
-		//filter.deny("dev.latvian.kubejs.script");
-		//filter.deny("dev.latvian.kubejs.mixin");
-		//filter.deny(KubeJSPlugin.class);
-		//filter.deny(KubeJSPlugins.class);
+		filter.deny("dev.latvian.kubejs.script");
+		filter.deny("dev.latvian.kubejs.mixin");
+		filter.deny(KubeJSPlugin.class);
+		filter.deny(KubeJSPlugins.class);
 
 		filter.allow("net.minecraft"); // Minecraft
 		filter.allow("com.mojang.authlib.GameProfile");
@@ -218,14 +213,14 @@ public class BuiltinKubeJSPlugin extends KubeJSPlugin {
 		filter.allow("me.shedaniel.architectury"); // Architectury
 
 		// Misc
-		//filter.allow("java.net"); // Networks
-		//filter.deny("sun"); // Sun
-		//filter.deny("com.sun"); // Sun
-		//filter.deny("io.netty"); // Netty
-		//filter.deny("org.objectweb.asm"); // ASM
-		//filter.deny("org.spongepowered.asm"); // Sponge ASM
-		//filter.deny("org.openjdk.nashorn"); // Nashorn
-		//filter.deny("jdk.nashorn"); // Nashorn
+		filter.allow("java.net"); // Networks
+		filter.deny("sun"); // Sun
+		filter.deny("com.sun"); // Sun
+		filter.deny("io.netty"); // Netty
+		filter.deny("org.objectweb.asm"); // ASM
+		filter.deny("org.spongepowered.asm"); // Sponge ASM
+		filter.deny("org.openjdk.nashorn"); // Nashorn
+		filter.deny("jdk.nashorn"); // Nashorn
 
 		// Mods
 		filter.allow("mezz.jei"); // JEI
