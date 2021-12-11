@@ -184,6 +184,9 @@ public class BuiltinKubeJSPlugin extends KubeJSPlugin {
 		filter.allow("java.lang.Comparable");
 		filter.allow("java.lang.CharSequence");
 
+		filter.allow("java.crypto");
+		filter.allow("java.security");
+		
 		filter.allow("java.math.BigInteger"); // java.math
 		filter.allow("java.math.BigDecimal");
 
