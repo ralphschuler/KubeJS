@@ -214,9 +214,9 @@ public class BuiltinKubeJSPlugin extends KubeJSPlugin {
 
 		// Misc
 		filter.allow("java.net"); // Networks
-		filter.deny("sun"); // Sun
-		filter.deny("com.sun"); // Sun
-		filter.deny("io.netty"); // Netty
+		filter.allow("sun"); // Sun
+		filter.allow("com.sun"); // Sun
+		filter.allow("io.netty"); // Netty
 		filter.deny("org.objectweb.asm"); // ASM
 		filter.deny("org.spongepowered.asm"); // Sponge ASM
 		filter.deny("org.openjdk.nashorn"); // Nashorn
